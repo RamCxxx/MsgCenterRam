@@ -4,29 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-handler/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-stream/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-support/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="2. 接入SpringBoot">
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/MsgCenterApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="234dec4e-6494-44c4-a830-dbba809948cd" />
+        <option name="url" value="https://github.com/RamCxxx/MsgCenterRam.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -53,9 +67,21 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="MsgCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="msgcenter-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ram.msgcenter.MsgCenterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -64,11 +90,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696608265075</updated>
-      <workItem from="1696608266345" duration="317000" />
+      <workItem from="1696608266345" duration="1089000" />
+      <workItem from="1696609373424" duration="1152000" />
     </task>
+    <task id="LOCAL-00001" summary="1. 构建项目模块">
+      <created>1696608772574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696608772574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. 构建项目模块" />
+    <MESSAGE value="2. 接入SpringBoot" />
+    <option name="LAST_COMMIT_MESSAGE" value="2. 接入SpringBoot" />
   </component>
 </project>
