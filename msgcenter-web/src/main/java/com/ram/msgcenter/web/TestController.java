@@ -1,6 +1,11 @@
 package com.ram.msgcenter.web;
 
 import com.alibaba.fastjson.JSON;
+import com.ram.msgcenter.service.api.impl.domain.MessageParam;
+import com.ram.msgcenter.service.api.impl.domain.SendRequest;
+import com.ram.msgcenter.service.api.impl.domain.SendResponse;
+import com.ram.msgcenter.service.api.impl.enums.BusinessCode;
+import com.ram.msgcenter.service.api.impl.service.SendService;
 import com.ram.msgcenter.support.dao.MessageTemplateDao;
 import com.ram.msgcenter.support.domain.MessageTemplate;
 import lombok.extern.slf4j.Slf4j;
@@ -21,6 +26,8 @@ public class TestController {
 
     @Autowired
     private MessageTemplateDao messageTemplateDao;
+    @Autowired
+    private SendService sendService;
 
     @RequestMapping("/test")
     private String test(){
@@ -33,6 +40,17 @@ public class TestController {
     private String testDataBase() {
         List<MessageTemplate> list = messageTemplateDao.findAllByIsDeletedEquals(0, PageRequest.of(0, 10));
         return JSON.toJSONString(list);
+    }
+    @RequestMapping("/send")
+    private String testSend() {
+        SendRequest sendRequest = SendRequest.builder()
+                .code(BusinessCode.COMMON_SEND.getCode())
+                .messageTemplateId(1L)
+                .messageParam(MessageParam.builder().receiver("13722222222").build()).build();
+
+        SendResponse response = sendService.send(sendRequest);
+        return JSON.toJSONString(response);
+
     }
 
 }

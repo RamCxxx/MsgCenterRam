@@ -4,19 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="5. 接入腾讯云短信服务">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/dao/MessageTemplateDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/dao/SmsRecordDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/domain/MessageTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/domain/SmsRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/msgcenter.sql" afterDir="false" />
+    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="7. 接口設計、api層設計及實現（責任鏈模式），初步實現對RocketMQ 的接入">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/constant/ramMsgConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/domain/TaskInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/ContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/DingDingRobotContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/DingDingWorkContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/EmailContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/EnterpriseWeChatContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/EnterpriseWeChatRobotContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/FeiShuRobotContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/ImContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/MiniProgramContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/OfficialAccountsContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/PushContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/dto/model/SmsContentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/ChannelType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/IdType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/RespStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/vo/BasicResultVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/eventbus/EventBusReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AfterParamCheckAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AssembleAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/PreParamCheckAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/SendMqAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/config/PipelineConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/BatchSendRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/MessageParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendTaskModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/enums/BusinessCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/RecallService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/SendService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/SendServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/constants/MessageQueuePipeline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/exception/ProcessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/mq/SendMqService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/mq/eventbus/EventBusListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/mq/eventbus/EventBusSendMqServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/mq/rocketmq/RocketMqSendMqServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/pipeline/BusinessProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/pipeline/ProcessContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/pipeline/ProcessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/pipeline/ProcessModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/pipeline/ProcessTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/utils/ContentHolderUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/utils/TaskInfoUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-impl/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msgcenter-support/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/msgcenter.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/msgcenter.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +71,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -38,6 +84,9 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="234dec4e-6494-44c4-a830-dbba809948cd" />
+  </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -94,6 +143,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ram.msgcenter.dto.model" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.MsgCenterApplication">
     <configuration name="TencentSmsScript" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ram.msgcenter.handler.TencentSmsScript" />
@@ -117,6 +171,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsgCenterApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="msgcenter-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ram.msgcenter.common.MsgCenterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsgCenterApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="msgcenter-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ram.msgcenter.service.api.impl.MsgCenterApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,7 +216,7 @@
       <workItem from="1696610983734" duration="321000" />
       <workItem from="1696611316171" duration="923000" />
       <workItem from="1696612259795" duration="126000" />
-      <workItem from="1696612404000" duration="5366000" />
+      <workItem from="1696612404000" duration="11198000" />
     </task>
     <task id="LOCAL-00001" summary="1. 构建项目模块">
       <created>1696608772574</created>
@@ -185,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696615380176</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="6. 设计表结构、接入MySQL、持久层框架实现简单查询">
+      <created>1696677588945</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696677588945</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +284,8 @@
     <MESSAGE value="3. 接入Lombok、guava、hutool" />
     <MESSAGE value="4. 接入日志框架logback" />
     <MESSAGE value="5. 接入腾讯云短信服务" />
-    <option name="LAST_COMMIT_MESSAGE" value="5. 接入腾讯云短信服务" />
+    <MESSAGE value="6. 设计表结构、接入MySQL、持久层框架实现简单查询" />
+    <MESSAGE value="7. 接口設計、api層設計及實現（責任鏈模式），初步實現對RocketMQ 的接入" />
+    <option name="LAST_COMMIT_MESSAGE" value="7. 接口設計、api層設計及實現（責任鏈模式），初步實現對RocketMQ 的接入" />
   </component>
 </project>
