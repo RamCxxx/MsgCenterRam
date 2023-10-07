@@ -13,3 +13,49 @@
 2023-10-07 01:38:45.742 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2023-10-07 01:38:45.743 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2023-10-07 01:38:45.756 [http-nio-8080-exec-1] INFO  com.ram.msgcenter.web.TestController - log：log测试
+2023-10-07 19:16:44.205 [main] INFO  com.ram.msgcenter.MsgCenterApplication - Starting MsgCenterApplication using Java 1.8.0_291 on LAPTOP-JKHLE6IR with PID 17072 (H:\Desktop\MsgCenter-Ram\msgcenter-web\target\classes started by Alwa in H:\Desktop\MsgCenter-Ram)
+2023-10-07 19:16:44.218 [main] INFO  com.ram.msgcenter.MsgCenterApplication - No active profile set, falling back to default profiles: default
+2023-10-07 19:16:44.818 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-07 19:16:44.874 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2023-10-07 19:16:45.296 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-10-07 19:16:45.303 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-07 19:16:45.304 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-10-07 19:16:45.304 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-10-07 19:16:45.409 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-10-07 19:16:45.409 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1146 ms
+2023-10-07 19:16:45.531 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-10-07 19:16:50.748 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-07 19:16:50.812 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2023-10-07 19:16:51.112 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-07 19:16:51.291 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-10-07 19:16:56.336 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-10-07 19:16:56.345 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-07 19:18:03.542 [main] INFO  com.ram.msgcenter.MsgCenterApplication - Starting MsgCenterApplication using Java 1.8.0_291 on LAPTOP-JKHLE6IR with PID 34696 (H:\Desktop\MsgCenter-Ram\msgcenter-web\target\classes started by Alwa in H:\Desktop\MsgCenter-Ram)
+2023-10-07 19:18:03.544 [main] INFO  com.ram.msgcenter.MsgCenterApplication - No active profile set, falling back to default profiles: default
+2023-10-07 19:18:04.228 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-07 19:18:04.279 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2023-10-07 19:18:04.694 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-10-07 19:18:04.701 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-07 19:18:04.702 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-10-07 19:18:04.702 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-10-07 19:18:04.799 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-10-07 19:18:04.800 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1209 ms
+2023-10-07 19:18:04.917 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-10-07 19:18:05.063 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-10-07 19:18:05.095 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-07 19:18:05.135 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2023-10-07 19:18:05.310 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-07 19:18:05.423 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-10-07 19:18:06.014 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-07 19:18:06.025 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-07 19:18:06.657 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-07 19:18:06.671 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-07 19:18:06.680 [main] INFO  com.ram.msgcenter.MsgCenterApplication - Started MsgCenterApplication in 3.504 seconds (JVM running for 5.139)
+2023-10-07 19:18:18.606 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-07 19:18:18.606 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-10-07 19:18:18.607 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-10-07 19:18:35.886 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-07 19:18:35.888 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-10-07 19:18:35.891 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
