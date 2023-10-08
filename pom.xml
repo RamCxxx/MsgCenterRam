@@ -14,8 +14,8 @@
         <module>msgcenter-stream</module>
         <module>msgcenter-handler</module>
         <module>msgcenter-web</module>
-        <module>msgcenter-service</module>
-        <module>msgcenter-service-impl</module>
+        <module>msgcenter-service-api</module>
+        <module>msgcenter-service-api-impl</module>
         <module>msgcenter-cron</module>
     </modules>
 
