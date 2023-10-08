@@ -2,12 +2,14 @@ package com.ram.msgcenter.handler.receiver.rocketmq;
 
 import com.alibaba.fastjson.JSON;
 import com.ram.msgcenter.domain.TaskInfo;
+import com.ram.msgcenter.handler.service.ConsumeService;
 import com.ram.msgcenter.support.constants.MessageQueuePipeline;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.annotation.SelectorType;
 import org.apache.rocketmq.spring.core.RocketMQListener;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
@@ -28,6 +30,10 @@ import java.util.List;
 @Slf4j
 public class RocketMqBizReceiver implements RocketMQListener<String> {
 
+    @Autowired
+    private ConsumeService consumeService;
+
+
     @Override
     public void onMessage(String message) {
         if (StringUtils.isBlank(message)) {
@@ -35,6 +41,6 @@ public class RocketMqBizReceiver implements RocketMQListener<String> {
         }
         List<TaskInfo> taskInfoLists = JSON.parseArray(message, TaskInfo.class);
         log.info("groupId:{},params:{}", message, JSON.toJSONString(taskInfoLists));
-        //TODO 服务未实现
+        consumeService.consume2Send(taskInfoLists);
     }
 }

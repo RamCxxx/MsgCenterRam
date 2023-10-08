@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="7. 接入RocketMQ（未完全实现服务）">
-      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/rocketmq/RocketMqBizReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/rocketmq/RocketMqRecallReceiver.java" afterDir="false" />
+    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="8. 接入RocketMQ">
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/constant/ThreadPoolConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/config/HandlerThreadPoolConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/pending/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/pending/TaskPendingHolder.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/service/ConsumeService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/service/impl/ConsumeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/utils/GroupIdMappingUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/config/ThreadPoolExecutorShutdownDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/utils/ThreadPoolUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/eventbus/EventBusReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/eventbus/EventBusReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/rocketmq/RocketMqBizReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/rocketmq/RocketMqBizReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/rocketmq/RocketMqRecallReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/receiver/rocketmq/RocketMqRecallReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-support/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +175,7 @@
       <workItem from="1696611316171" duration="923000" />
       <workItem from="1696612259795" duration="126000" />
       <workItem from="1696612404000" duration="12952000" />
-      <workItem from="1696769998967" duration="4206000" />
+      <workItem from="1696769998967" duration="5864000" />
     </task>
     <task id="LOCAL-00001" summary="1. 构建项目模块">
       <created>1696608772574</created>
@@ -220,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696683219399</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="8. 接入RocketMQ">
+      <created>1696774713430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696774713430</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +260,8 @@
     <MESSAGE value="6. 设计表结构、接入MySQL、持久层框架实现简单查询" />
     <MESSAGE value="7. 接口設計、api層設計及實現（責任鏈模式），初步實現對RocketMQ 的接入" />
     <MESSAGE value="7. 接入RocketMQ（未完全实现服务）" />
-    <option name="LAST_COMMIT_MESSAGE" value="7. 接入RocketMQ（未完全实现服务）" />
+    <MESSAGE value="7. 接入RocketMQ" />
+    <MESSAGE value="8. 接入RocketMQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="8. 接入RocketMQ" />
   </component>
 </project>
