@@ -4,29 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="9. 使用线程池消费MQ的数据">
+    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="10. 接入Redis">
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/constant/CommonConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/AnchorState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/DeduplicationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/DeduplicationHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/DeduplicationParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/DeduplicationRuleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/build/AbstractDeduplicationBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/build/Builder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/build/ContentDeduplicationBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/build/FrequencyDeduplicationBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/limit/AbstractLimitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/limit/LimitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/limit/SimpleLimitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/limit/SlideWindowLimitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/service/AbstractDeduplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/service/ContentDeduplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/service/DeduplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/service/FrequencyDeduplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/utils/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AfterParamCheckAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AfterParamCheckAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AssembleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AssembleAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/PreParamCheckAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/PreParamCheckAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/SendMqAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/SendMqAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/config/PipelineConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/config/PipelineConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/BatchSendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/BatchSendRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/MessageParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/MessageParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendTaskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/domain/SendTaskModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/enums/BusinessCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/enums/BusinessCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/RecallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/RecallService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/SendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/SendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/SendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/service/SendServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-support/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/pending/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/pending/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "spring.configuration.checksum": "0ba7fcbde8fbdb8c25787f9fda02ac47",
+    "spring.configuration.checksum": "a76114b688f14e8b251549299aede7e7",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -109,6 +110,9 @@
     ]
   }
 }]]></component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ram.msgcenter.dto.model" />
@@ -183,7 +187,8 @@
       <workItem from="1696611316171" duration="923000" />
       <workItem from="1696612259795" duration="126000" />
       <workItem from="1696612404000" duration="12952000" />
-      <workItem from="1696769998967" duration="6619000" />
+      <workItem from="1696769998967" duration="7665000" />
+      <workItem from="1696865322927" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="1. 构建项目模块">
       <created>1696608772574</created>
@@ -248,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696776317289</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="10. 接入Redis、优化了模块">
+      <created>1696777104177</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696777104177</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +290,7 @@
     <MESSAGE value="7. 接入RocketMQ" />
     <MESSAGE value="8. 接入RocketMQ" />
     <MESSAGE value="9. 使用线程池消费MQ的数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="9. 使用线程池消费MQ的数据" />
+    <MESSAGE value="10. 接入Redis、优化了模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="10. 接入Redis、优化了模块" />
   </component>
 </project>
