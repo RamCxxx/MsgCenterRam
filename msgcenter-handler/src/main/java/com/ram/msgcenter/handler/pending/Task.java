@@ -3,6 +3,7 @@ package com.ram.msgcenter.handler.pending;
 import cn.hutool.core.collection.CollUtil;
 import com.ram.msgcenter.domain.TaskInfo;
 import com.ram.msgcenter.handler.deduplication.DeduplicationRuleService;
+import com.ram.msgcenter.handler.discard.DiscardMessageService;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +30,8 @@ public class Task implements Runnable {
 
     @Autowired
     private DeduplicationRuleService deduplicationRuleService;
-
+    @Autowired
+    private DiscardMessageService discardMessageService;
 
     private TaskInfo taskInfo;
 
@@ -38,10 +40,10 @@ public class Task implements Runnable {
 
         log.info("task:" + Thread.currentThread().getName());
 
-//        // 0. 丢弃消息
-//        if (discardMessageService.isDiscard(taskInfo)) {
-//            return;
-//        }
+        // 0. 丢弃消息
+        if (discardMessageService.isDiscard(taskInfo)) {
+            return;
+        }
 //        // 1. 屏蔽消息
 //        shieldService.shield(taskInfo);
 //
