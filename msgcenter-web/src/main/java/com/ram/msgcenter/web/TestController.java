@@ -49,7 +49,7 @@ public class TestController {
         SendRequest sendRequest = SendRequest.builder()
                 .code(BusinessCode.COMMON_SEND.getCode())
                 .messageTemplateId(1L)
-                .messageParam(MessageParam.builder().receiver("13722222222").build()).build();
+                .messageParam(MessageParam.builder().receiver("2848428570@qq.com").build()).build();
 
         SendResponse response = sendService.send(sendRequest);
         return JSON.toJSONString(response);
@@ -58,8 +58,8 @@ public class TestController {
 
     @RequestMapping("/redis")
     private String testRedis() {
-        stringRedisTemplate.opsForValue().set("java3y", "austin");
-        return stringRedisTemplate.opsForValue().get("java3y");
+        stringRedisTemplate.opsForValue().set("ramxx", "msgcenter");
+        return stringRedisTemplate.opsForValue().get("ramxx");
     }
 
 
