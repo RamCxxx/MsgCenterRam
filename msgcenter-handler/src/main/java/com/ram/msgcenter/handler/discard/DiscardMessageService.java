@@ -3,8 +3,11 @@ package com.ram.msgcenter.handler.discard;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.ram.msgcenter.constant.CommonConstant;
+import com.ram.msgcenter.domain.AnchorInfo;
 import com.ram.msgcenter.domain.TaskInfo;
+import com.ram.msgcenter.enums.AnchorState;
 import com.ram.msgcenter.support.service.ConfigService;
+import com.ram.msgcenter.support.utils.LogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +23,8 @@ public class DiscardMessageService {
     @Autowired
     private ConfigService config;
 
-//    @Autowired
-//    private LogUtils logUtils;
+    @Autowired
+    private LogUtils logUtils;
 
 
     /**
@@ -35,7 +38,7 @@ public class DiscardMessageService {
         JSONArray array = JSON.parseArray(config.getProperty(DISCARD_MESSAGE_KEY, CommonConstant.EMPTY_VALUE_JSON_ARRAY));
 
         if (array.contains(String.valueOf(taskInfo.getMessageTemplateId()))) {
-            //logUtils.print(AnchorInfo.builder().businessId(taskInfo.getBusinessId()).ids(taskInfo.getReceiver()).state(AnchorState.DISCARD.getCode()).build());
+            logUtils.print(AnchorInfo.builder().businessId(taskInfo.getBusinessId()).ids(taskInfo.getReceiver()).state(AnchorState.DISCARD.getCode()).build());
             return true;
         }
         return false;

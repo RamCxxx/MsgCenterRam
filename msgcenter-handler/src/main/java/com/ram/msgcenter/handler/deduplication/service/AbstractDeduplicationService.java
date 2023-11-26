@@ -1,10 +1,12 @@
 package com.ram.msgcenter.handler.deduplication.service;
 
 import cn.hutool.core.collection.CollUtil;
+import com.ram.msgcenter.domain.AnchorInfo;
 import com.ram.msgcenter.domain.TaskInfo;
 import com.ram.msgcenter.handler.deduplication.DeduplicationHolder;
 import com.ram.msgcenter.handler.deduplication.DeduplicationParam;
 import com.ram.msgcenter.handler.deduplication.limit.LimitService;
+import com.ram.msgcenter.support.utils.LogUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,8 +32,8 @@ public abstract class AbstractDeduplicationService implements DeduplicationServi
         deduplicationHolder.putService(deduplicationType, this);
     }
 
-//    @Autowired
-//    private LogUtils logUtils;
+    @Autowired
+    private LogUtils logUtils;
 
 
     @Override
@@ -43,7 +45,7 @@ public abstract class AbstractDeduplicationService implements DeduplicationServi
         // 剔除符合去重条件的用户
         if (CollUtil.isNotEmpty(filterReceiver)) {
             taskInfo.getReceiver().removeAll(filterReceiver);
-            //logUtils.print(AnchorInfo.builder().businessId(taskInfo.getBusinessId()).ids(filterReceiver).state(param.getAnchorState().getCode()).build());
+            logUtils.print(AnchorInfo.builder().businessId(taskInfo.getBusinessId()).ids(filterReceiver).state(param.getAnchorState().getCode()).build());
         }
     }
 

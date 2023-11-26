@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="13. 编写渠道分发器&amp;接入邮箱">
+    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="14. 使用注解优雅打印接口日志">
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/domain/AnchorInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/domain/LogParam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-support/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/service/AbstractDeduplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/deduplication/service/AbstractDeduplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/discard/DiscardMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/discard/DiscardMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/handler/BaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-handler/src/main/java/com/ram/msgcenter/handler/handler/BaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/utils/LogUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +175,7 @@
       <workItem from="1696865322927" duration="3423000" />
       <workItem from="1696958075447" duration="2068000" />
       <workItem from="1700900185155" duration="1516000" />
-      <workItem from="1700968254882" duration="29000" />
+      <workItem from="1700968254882" duration="1194000" />
     </task>
     <task id="LOCAL-00001" summary="1. 构建项目模块">
       <created>1696608772574</created>
@@ -264,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700901381952</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="14. 使用注解优雅打印接口日志">
+      <created>1700968424968</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700968424968</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +315,7 @@
     <MESSAGE value="11. 实现平台性的去重：内容、频次，通过Redis 和lua 脚本实现滑动窗口去重" />
     <MESSAGE value="11. 接入分布式配置中心 Apollo" />
     <MESSAGE value="13. 编写渠道分发器&amp;接入邮箱" />
-    <option name="LAST_COMMIT_MESSAGE" value="13. 编写渠道分发器&amp;接入邮箱" />
+    <MESSAGE value="14. 使用注解优雅打印接口日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="14. 使用注解优雅打印接口日志" />
   </component>
 </project>

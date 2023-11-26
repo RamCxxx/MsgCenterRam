@@ -1,6 +1,9 @@
 package com.ram.msgcenter.handler.handler;
 
+import com.ram.msgcenter.domain.AnchorInfo;
 import com.ram.msgcenter.domain.TaskInfo;
+import com.ram.msgcenter.enums.AnchorState;
+import com.ram.msgcenter.support.utils.LogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
@@ -19,6 +22,9 @@ public abstract class BaseHandler implements Handler {
      */
     protected Integer channelCode;
 
+    @Autowired
+    private LogUtils logUtils;
+
     /**
      * 初始化渠道与Handler的映射关系
      */
@@ -32,8 +38,10 @@ public abstract class BaseHandler implements Handler {
     @Override
     public void doHandler(TaskInfo taskInfo) {
         if (handler(taskInfo)) {
+            logUtils.print(AnchorInfo.builder().state(AnchorState.SEND_SUCCESS.getCode()).businessId(taskInfo.getBusinessId()).ids(taskInfo.getReceiver()).build());
             return;
         }
+        logUtils.print(AnchorInfo.builder().state(AnchorState.SEND_FAIL.getCode()).businessId(taskInfo.getBusinessId()).ids(taskInfo.getReceiver()).build());
     }
 
 
