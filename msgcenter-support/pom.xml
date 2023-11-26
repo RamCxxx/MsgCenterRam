@@ -68,5 +68,9 @@
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.monitor4all</groupId>
+            <artifactId>log-record-starter</artifactId>
+        </dependency>
     </dependencies>
 </project>
