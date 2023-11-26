@@ -99,6 +99,13 @@
                 <artifactId>log-record-starter</artifactId>
                 <version>1.0.4.1</version>
             </dependency>
+            <!--graylog-->
+            <dependency>
+                <groupId>de.siegmar</groupId>
+                <artifactId>logback-gelf</artifactId>
+                <version>3.0.0</version>
+            </dependency>
+
 
 
         </dependencies>
