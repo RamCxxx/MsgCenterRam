@@ -4,10 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="15. 全链路追踪准备：日志埋点">
+    <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="17.模板&amp;账号管理：web统一返回值&amp;异常处理&amp;接口日志">
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/AuditStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/MessageStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/PowerfulEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/TemplateType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/dao/ChannelAccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/domain/ChannelAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/advice/RamMsgResponseBodyAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/annotation/RamAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/annotation/RamResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/aspect/RamAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/config/CommonConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/config/CrossConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/config/SwaggerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/controller/ChannelAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/controller/MessageTemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/controller/SendController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/exception/CommonException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/exception/ExceptionHandlerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/service/ChannelAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/service/MessageTemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/service/impl/ChannelAccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/service/impl/MessageTemplateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/utils/Convert4Amis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/DataParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/MessageTemplateParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/MessageTemplateVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/RequestLogDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/UploadResponseVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/amis/CommonAmisVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/amis/EchartsVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/amis/SmsTimeLineVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/vo/amis/UserTimeLineVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-support/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/constant/ramMsgConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/constant/ramMsgConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/RespStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-common/src/main/java/com/ram/msgcenter/enums/RespStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AssembleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-service-api-impl/src/main/java/com/ram/msgcenter/service/api/impl/action/AssembleAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/dao/MessageTemplateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/dao/MessageTemplateDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/domain/MessageTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/domain/MessageTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -172,7 +210,8 @@
       <workItem from="1696865322927" duration="3423000" />
       <workItem from="1696958075447" duration="2068000" />
       <workItem from="1700900185155" duration="1516000" />
-      <workItem from="1700968254882" duration="2190000" />
+      <workItem from="1700968254882" duration="6053000" />
+      <workItem from="1703345059062" duration="4080000" />
     </task>
     <task id="LOCAL-00001" summary="1. 构建项目模块">
       <created>1696608772574</created>
@@ -279,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700984760498</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="16. 接入分布式日志组件graylog">
+      <created>1700994747382</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700994747382</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +367,8 @@
     <MESSAGE value="13. 编写渠道分发器&amp;接入邮箱" />
     <MESSAGE value="14. 使用注解优雅打印接口日志" />
     <MESSAGE value="15. 全链路追踪准备：日志埋点" />
-    <option name="LAST_COMMIT_MESSAGE" value="15. 全链路追踪准备：日志埋点" />
+    <MESSAGE value="16. 接入分布式日志组件graylog" />
+    <MESSAGE value="17.模板&amp;账号管理：web统一返回值&amp;异常处理&amp;接口日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="17.模板&amp;账号管理：web统一返回值&amp;异常处理&amp;接口日志" />
   </component>
 </project>

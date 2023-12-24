@@ -36,6 +36,12 @@
             <artifactId>msgcenter-service-api-impl</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

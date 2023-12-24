@@ -7,6 +7,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Throwables;
 
+import com.ram.msgcenter.constant.CommonConstant;
 import com.ram.msgcenter.constant.ramMsgConstant;
 import com.ram.msgcenter.service.api.impl.enums.BusinessCode;
 import com.ram.msgcenter.service.api.impl.domain.SendTaskModel;
@@ -47,7 +48,7 @@ public class AssembleAction implements BusinessProcess<SendTaskModel> {
 
         try {
             Optional<MessageTemplate> messageTemplate = messageTemplateDao.findById(messageTemplateId);
-            if (!messageTemplate.isPresent() || messageTemplate.get().getIsDeleted().equals(ramMsgConstant.TRUE)) {
+            if (!messageTemplate.isPresent() || messageTemplate.get().getIsDeleted().equals(CommonConstant.TRUE)) {
                 context.setNeedBreak(true).setResponse(BasicResultVO.fail(RespStatusEnum.TEMPLATE_NOT_FOUND));
                 return;
             }

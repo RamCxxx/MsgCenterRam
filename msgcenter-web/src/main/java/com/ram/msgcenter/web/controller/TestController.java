@@ -1,4 +1,4 @@
-package com.ram.msgcenter.web;
+package com.ram.msgcenter.web.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.ram.msgcenter.service.api.impl.domain.MessageParam;
@@ -41,7 +41,7 @@ public class TestController {
 
     @RequestMapping("/database")
     private String testDataBase() {
-        List<MessageTemplate> list = messageTemplateDao.findAllByIsDeletedEquals(0, PageRequest.of(0, 10));
+        List<MessageTemplate> list = messageTemplateDao.findAllByIsDeletedEqualsOrderByUpdatedDesc(0, PageRequest.of(0, 10));
         return JSON.toJSONString(list);
     }
     @RequestMapping("/send")

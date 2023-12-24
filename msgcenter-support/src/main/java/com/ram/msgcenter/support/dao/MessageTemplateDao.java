@@ -3,6 +3,7 @@ package com.ram.msgcenter.support.dao;
 import com.ram.msgcenter.support.domain.MessageTemplate;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
  * 消息模板Dao
  * @author ramxx
  */
-public interface MessageTemplateDao extends JpaRepository<MessageTemplate, Long> {
+public interface MessageTemplateDao extends JpaRepository<MessageTemplate, Long>, JpaSpecificationExecutor<MessageTemplate> {
 
 
     /**
@@ -20,7 +21,7 @@ public interface MessageTemplateDao extends JpaRepository<MessageTemplate, Long>
      * @param pageable 分页对象
      * @return
      */
-    List<MessageTemplate> findAllByIsDeletedEquals(Integer deleted, Pageable pageable);
+    List<MessageTemplate> findAllByIsDeletedEqualsOrderByUpdatedDesc(Integer deleted, Pageable pageable);
 
 
     /**
