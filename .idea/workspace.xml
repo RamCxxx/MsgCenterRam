@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61bd68b3-3345-4e51-9771-8704cfb7c223" name="更改" comment="19. 动态创建/修改/删除xxl-job定时任务 &amp;&amp; 指定人群文件定时发送消息模板">
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/constants/XxlJobConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/entity/XxlJobGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/entity/XxlJobInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/enums/ExecutorBlockStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/enums/ExecutorRouteStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/enums/GlueTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/enums/MisfireStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/enums/ScheduleTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/service/CronTaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/service/impl/CronTaskServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/xxl/utils/XxlJobUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/example.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/config/CronAsyncThreadPoolConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/constants/PendingConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/csv/CountFileRowHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/handler/CronTaskHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/pending/CrowdBatchTaskPending.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/service/TaskHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/service/impl/TaskHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/utils/ReadFileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-cron/src/main/java/com/ram/msgcenter/cron/vo/CrowdInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/config/SupportThreadPoolConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/pending/AbstractLazyPending.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msgcenter-support/src/main/java/com/ram/msgcenter/support/pending/PendingParam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/controller/MessageTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/controller/MessageTemplateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/service/impl/MessageTemplateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/java/com/ram/msgcenter/web/service/impl/MessageTemplateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-web/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msgcenter-cron/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msgcenter-cron/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,7 @@
       <workItem from="1696958075447" duration="2068000" />
       <workItem from="1700900185155" duration="1516000" />
       <workItem from="1700968254882" duration="6053000" />
-      <workItem from="1703345059062" duration="6498000" />
+      <workItem from="1703345059062" duration="7460000" />
     </task>
     <task id="LOCAL-00001" summary="1. 构建项目模块">
       <created>1696608772574</created>
@@ -321,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703510037034</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="19. 动态创建/修改/删除xxl-job定时任务 &amp;&amp; 指定人群文件定时发送消息模板">
+      <created>1703510245723</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703510245723</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
