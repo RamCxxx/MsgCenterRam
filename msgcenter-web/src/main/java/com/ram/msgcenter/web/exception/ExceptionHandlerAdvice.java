@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @description 拦截异常统一返回
  * @date 2023/2/9 19:03
  */
-@ControllerAdvice(basePackages = "com.java3y.austin.web.controller")
+@ControllerAdvice(basePackages = "com.ram.msgcenter.web.controller")
 @ResponseBody
 public class ExceptionHandlerAdvice {
     private static final Logger log = LoggerFactory.getLogger(ExceptionHandlerAdvice.class);

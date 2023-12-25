@@ -17,7 +17,7 @@ public class MsgCenterApplication {
          * 2、将application.properties配置文件的 msgcenter.apollo.enabled 改为true
          * 3、下方的property替换真实的ip和port
          */
-        System.setProperty("apollo.config-service", "http://austin-apollo-config:8080");
+        System.setProperty("apollo.config-service", "http://msgcenter-apollo-config:8080");
 
         SpringApplication.run(MsgCenterApplication.class, args);
     }

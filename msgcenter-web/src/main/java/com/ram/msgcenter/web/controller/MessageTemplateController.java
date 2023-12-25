@@ -1,7 +1,10 @@
 package com.ram.msgcenter.web.controller;
 
+import cn.hutool.core.map.MapUtil;
+import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
+import com.google.common.base.Throwables;
 import com.ram.msgcenter.enums.RespStatusEnum;
 import com.ram.msgcenter.service.api.impl.domain.MessageParam;
 import com.ram.msgcenter.service.api.impl.domain.SendRequest;
@@ -9,6 +12,7 @@ import com.ram.msgcenter.service.api.impl.domain.SendResponse;
 import com.ram.msgcenter.service.api.impl.enums.BusinessCode;
 import com.ram.msgcenter.service.api.impl.service.SendService;
 import com.ram.msgcenter.support.domain.MessageTemplate;
+import com.ram.msgcenter.vo.BasicResultVO;
 import com.ram.msgcenter.web.exception.CommonException;
 import com.ram.msgcenter.web.service.MessageTemplateService;
 import com.ram.msgcenter.web.utils.Convert4Amis;
@@ -21,7 +25,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -48,7 +55,7 @@ public class MessageTemplateController {
 //    @Autowired
 //    private LoginUtils loginUtils;
 
-    @Value("${austin.business.upload.crowd.path}")
+    @Value("${msgcenter.business.upload.crowd.path}")
     private String dataPath;
 
     /**
@@ -131,7 +138,43 @@ public class MessageTemplateController {
         return Convert4Amis.getTestContent(messageTemplate.getMsgContent());
     }
 
+    /**
+     * 启动模板的定时任务
+     */
+    @PostMapping("start/{id}")
+    @ApiOperation("/启动模板的定时任务")
+    public BasicResultVO start(@RequestBody @PathVariable("id") Long id) {
+        return messageTemplateService.startCronTask(id);
+    }
 
+    /**
+     * 暂停模板的定时任务
+     */
+    @PostMapping("stop/{id}")
+    @ApiOperation("/暂停模板的定时任务")
+    public BasicResultVO stop(@RequestBody @PathVariable("id") Long id) {
+        return messageTemplateService.stopCronTask(id);
+    }
+
+    /**
+     * 上传人群文件
+     */
+    @PostMapping("upload")
+    @ApiOperation("/上传人群文件")
+    public HashMap<Object, Object> upload(@RequestParam("file") MultipartFile file) {
+        String filePath = dataPath + IdUtil.fastSimpleUUID() + file.getOriginalFilename();
+        try {
+            File localFile = new File(filePath);
+            if (!localFile.exists()) {
+                localFile.mkdirs();
+            }
+            file.transferTo(localFile);
+        } catch (Exception e) {
+            log.error("MessageTemplateController#upload fail! e:{},params{}", Throwables.getStackTraceAsString(e), JSON.toJSONString(file));
+            throw new CommonException(RespStatusEnum.SERVICE_ERROR);
+        }
+        return MapUtil.of(new String[][]{{"value", filePath}});
+    }
 
 
 

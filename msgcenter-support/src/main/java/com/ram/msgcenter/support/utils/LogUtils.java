@@ -25,7 +25,7 @@ public class LogUtils extends CustomLogListener {
     @Autowired
     private SendMqService sendMqService;
 
-    @Value("${austin.business.log.topic.name}")
+    @Value("${msgcenter.business.log.topic.name}")
     private String topicName;
 
     /**

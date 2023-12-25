@@ -41,7 +41,7 @@ public class RamAspect {
     private final String REQUEST_ID_KEY = "request_unique_id";
 
     /**
-     * 只切AustinAspect注解
+     * 只切RamAspect注解
      */
     @Pointcut("@within(com.ram.msgcenter.web.annotation.RamAspect) || @annotation(com.ram.msgcenter.web.annotation.RamAspect)")
     public void executeService() {
@@ -91,7 +91,7 @@ public class RamAspect {
             args.add(e);
         });
         logVo.setArgs(args.toArray());
-        logVo.setProduct("austin");
+        logVo.setProduct("msgcenter");
         logVo.setPath(methodSignature.getDeclaringTypeName() + "." + methodSignature.getMethod().getName());
         logVo.setReferer(request.getHeader("referer"));
         logVo.setRemoteAddr(request.getRemoteAddr());

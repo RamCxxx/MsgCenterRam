@@ -38,7 +38,7 @@ public class SwaggerConfiguration {
                 //配置文档的元信息
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.java3y.austin.web.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ram.msgcenter.web.controller"))
                 //正则匹配请求路径，并分配到当前项目组
                 //.paths(PathSelectors.ant("/api/**"))
                 .build();
